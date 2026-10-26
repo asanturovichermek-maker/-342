@@ -1,0 +1,297 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 18px;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  color: #f8fafc;
+  background: linear-gradient(135deg, #0f172a, #312e81, #164e63);
+}
+
+.app {
+  max-width: 720px;
+  margin: 20px auto;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 24px;
+}
+
+.logo {
+  display: grid;
+  place-items: center;
+  width: 65px;
+  height: 65px;
+  border-radius: 18px;
+  background: #4338ca;
+  font-size: 36px;
+}
+
+h1 {
+  margin: 0 0 7px;
+  font-size: 29px;
+}
+
+.header p {
+  margin: 0;
+  color: #cbd5e1;
+}
+
+.card {
+  padding: 26px;
+  border: 1px solid #475569;
+  border-radius: 22px;
+  background: rgba(15, 23, 42, 0.94);
+  box-shadow: 0 20px 55px #0003;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.hero {
+  margin: 8px 0;
+  text-align: center;
+  font-size: 65px;
+}
+
+.card > h2 {
+  text-align: center;
+}
+
+#startScreen > p,
+#resultMessage {
+  color: #cbd5e1;
+  text-align: center;
+  line-height: 1.7;
+}
+
+.features {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 9px;
+  margin: 22px 0;
+}
+
+.features span {
+  padding: 9px 12px;
+  border-radius: 20px;
+  background: #273449;
+  font-size: 13px;
+}
+
+label {
+  display: block;
+  margin: 20px 0 8px;
+}
+
+select {
+  width: 100%;
+  padding: 14px;
+  border: 1px solid #64748b;
+  border-radius: 10px;
+  background: #1e293b;
+  color: white;
+  font-size: 16px;
+}
+
+button {
+  font: inherit;
+  cursor: pointer;
+  touch-action: manipulation;
+  transition: background 0.2s, transform 0.1s;
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+.primary,
+.secondary {
+  width: 100%;
+  padding: 15px;
+  margin-top: 14px;
+  border: none;
+  border-radius: 12px;
+  font-weight: bold;
+}
+
+.primary {
+  background: #6366f1;
+  color: white;
+}
+
+.primary:hover {
+  background: #4f46e5;
+}
+
+.secondary {
+  background: #334155;
+  color: white;
+}
+
+.quiz-top,
+.question-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.quiz-top {
+  color: #cbd5e1;
+  font-size: 14px;
+}
+
+.progress-track {
+  height: 9px;
+  margin: 18px 0;
+  overflow: hidden;
+  border-radius: 10px;
+  background: #334155;
+}
+
+.progress {
+  width: 0;
+  height: 100%;
+  border-radius: inherit;
+  background: #34d399;
+  transition: width 0.3s;
+}
+
+.question-meta {
+  color: #a5b4fc;
+  font-size: 14px;
+}
+
+#timer {
+  padding: 7px 11px;
+  border-radius: 10px;
+  background: #334155;
+}
+
+#questionText {
+  min-height: 85px;
+  margin: 25px 0;
+  font-size: 23px;
+  line-height: 1.5;
+}
+
+.answers {
+  display: grid;
+  gap: 11px;
+}
+
+.answer-btn {
+  width: 100%;
+  padding: 15px;
+  border: 1px solid #475569;
+  border-radius: 12px;
+  background: #1e293b;
+  color: white;
+  text-align: left;
+  line-height: 1.5;
+}
+
+.answer-btn:hover:not(:disabled) {
+  border-color: #818cf8;
+  background: #303b59;
+}
+
+.answer-btn:disabled {
+  cursor: default;
+  opacity: 1;
+}
+
+.answer-btn.correct {
+  border-color: #34d399;
+  background: #065f46;
+}
+
+.answer-btn.wrong {
+  border-color: #fb7185;
+  background: #881337;
+}
+
+.feedback {
+  min-height: 45px;
+  padding-top: 14px;
+  line-height: 1.6;
+}
+
+.feedback.good {
+  color: #6ee7b7;
+}
+
+.feedback.bad {
+  color: #fda4af;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin: 25px 0;
+}
+
+.stats div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 17px 5px;
+  border-radius: 12px;
+  background: #1e293b;
+  text-align: center;
+}
+
+.stats strong {
+  color: #a5b4fc;
+  font-size: 25px;
+}
+
+.stats span {
+  color: #cbd5e1;
+  font-size: 12px;
+}
+
+footer {
+  padding: 25px 0 10px;
+  color: #cbd5e1;
+  text-align: center;
+  font-size: 13px;
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 10px;
+  }
+
+  .app {
+    margin: 8px auto;
+  }
+
+  .card {
+    padding: 18px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  #questionText {
+    font-size: 20px;
+  }
+
+  .stats strong {
+    font-size: 21px;
+  }
+}a
+
