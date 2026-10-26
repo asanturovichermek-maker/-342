@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>World Quiz — 100 вопросов</title>
+  <link rel="stylesheet" href="викторина.css">
+</head>
+<body>
+  <main class="app">
+    <header class="header">
+      <div class="logo">🌍</div>
+      <div>
+        <h1>World Quiz</h1>
+        <p>100 вопросов обо всём мире</p>
+      </div>
+    </header>
+
+    <section id="startScreen" class="card">
+      <div class="hero">🧠</div>
+      <h2>Проверь свои знания!</h2>
+      <p>
+        Страны, космос, животные, история, наука,
+        технологии и многое другое.
+      </p>
+      <div class="features">
+        <span>🌎 100 вопросов</span>
+        <span>⭐ Система очков</span>
+        <span>🏆 Итоговый результат</span>
+      </div>
+      <label for="category">Выбери категорию</label>
+      <select id="category">
+        <option value="all">Все категории</option>
+        <option value="География">География</option>
+        <option value="Космос">Космос</option>
+        <option value="Животные">Животные</option>
+        <option value="Наука">Наука</option>
+        <option value="История">История</option>
+        <option value="Технологии">Технологии</option>
+        <option value="Спорт">Спорт</option>
+        <option value="Культура">Культура</option>
+        <option value="Природа">Природа</option>
+        <option value="Общие знания">Общие знания</option>
+      </select>
+      <button id="startButton" class="primary">
+        Начать викторину 🚀
+      </button>
+    </section>
+
+    <section id="quizScreen" class="card hidden">
+      <div class="quiz-top">
+        <span id="questionCounter">Вопрос 1 из 100</span>
+        <span id="score">⭐ 0</span>
+      </div>
+
+      <div class="progress-track">
+        <div id="progress" class="progress"></div>
+      </div>
+
+      <div class="question-meta">
+        <span id="questionCategory">География</span>
+        <span id="timer">⏱ 20</span>
+      </div>
+
+      <h2 id="questionText">Вопрос появится здесь</h2>
+
+      <div id="answers" class="answers"></div>
+
+      <div id="feedback" class="feedback" aria-live="polite"></div>
+
+      <button id="nextButton" class="primary hidden">
+        Следующий вопрос →
+      </button>
+    </section>
+
+    <section id="resultScreen" class="card hidden">
+      <div class="hero">🏆</div>
+      <h2>Викторина завершена!</h2>
+      <p id="resultMessage"></p>
+      <div class="stats">
+        <div>
+          <strong id="finalScore">0</strong>
+          <span>Очки</span>
+        </div>
+        <div>
+          <strong id="correctCount">0</strong>
+          <span>Правильных ответов</span>
+        </div>
+        <div>
+          <strong id="percent">0%</strong>
+          <span>Точность</span>
+        </div>
+      </div>
+      <button id="restartButton" class="primary">
+        Играть снова 🔄
+      </button>
+      <button id="homeButton" class="secondary">
+        В главное меню
+      </button>
+    </section>
+
+    <footer>WORLD QUIZ · Учись, играя!</footer>
+  </main>
+
+  <script src="викторина.js"></script>
+</body>
+</html>
